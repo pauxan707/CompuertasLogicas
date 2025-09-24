@@ -1,6 +1,6 @@
 ﻿namespace Library;
 
-public class NOTGate
+public class NOTGate: ILogicGate
 {
     
 }

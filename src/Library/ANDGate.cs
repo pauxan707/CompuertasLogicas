@@ -1,6 +1,6 @@
 ﻿namespace Library;
 
-public class ANDGate: IGate
+public class ANDGate: ILogicGate
 {
     public string Name { get; set; }
     public List<IGate> Input = new List<IGate>();
