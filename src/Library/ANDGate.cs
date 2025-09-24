@@ -3,28 +3,26 @@
 public class ANDGate: ILogicGate
 {
     public string Name { get; set; }
-    public List<IGate> Input = new List<IGate>();
-    public IGate Output { get; set; }
+    public List<ILogicGate> Inputs = new List<ILogicGate>();
 
     public ANDGate(string name)
     {
         Name = name;
     }
 
-    public void AddInput(IGate iGate)
+    public void AddInput(ILogicGate gate)
     {
-        Input.Add(iGate);
+        Input.Add(gate);
     }
 
     public IGate Evaluate()
     {
-        foreach (IGate element in this.Input)
+        foreach (ILogicGate gate in Inputs)
         {
-            if (element == false)
-            {
-                
-            }
+            if (!gate.Evaluate())
+                return false;
         }
-        
+
+        return true;
     }
 }
