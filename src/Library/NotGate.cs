@@ -1,6 +1,6 @@
 ﻿namespace Library;
 
-public class NOTGate: ILogicGate
+public class NotGate: ILogicGate
 {
     public string Name { get; set; }
     public ILogicGate Input;
