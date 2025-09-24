@@ -5,17 +5,17 @@ public class ANDGate: ILogicGate
     public string Name { get; set; }
     public List<ILogicGate> Inputs = new List<ILogicGate>();
 
-    public ANDGate(string name)
+    public AndGate(string name)
     {
         Name = name;
     }
 
     public void AddInput(ILogicGate gate)
     {
-        Input.Add(gate);
+        Inputs.Add(gate);
     }
 
-    public IGate Evaluate()
+    public bool Evaluate()
     {
         foreach (ILogicGate gate in Inputs)
         {

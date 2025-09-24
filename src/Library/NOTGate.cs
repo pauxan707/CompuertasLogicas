@@ -3,19 +3,15 @@
 public class NOTGate: ILogicGate
 {
     public string Name { get; set; }
-    public List<ILogicGate> Inputs = new List<ILogicGate>();
+    public ILogicGate Input;
 
-    public ANDGate(string name)
+    public NotGate(string name, ILogicGate input)
     {
         Name = name;
+        Input = input;
     }
-
-    public void AddInput(ILogicGate gate)
-    {
-        Inputs.Add(gate);
-    }
-
-    public IGate Evaluate()
+    
+    public bool Evaluate()
     {
         return !Input.Evaluate();
     }
