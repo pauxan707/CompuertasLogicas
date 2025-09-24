@@ -1,6 +1,6 @@
 ﻿namespace Library;
 
-public class ILogicGate
+public interface ILogicGate
 {
     bool Evaluate();
 }
